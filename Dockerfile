@@ -74,17 +74,10 @@ RUN \
   apt-get autoclean
 
 # Copy required scripts
-COPY scripts/install_R_version scripts/install_R_versions scripts/install_python_versions /usr/sbin/
+COPY scripts/install_python_versions /usr/sbin/
 RUN \
-  chmod 700 /usr/sbin/install_R_version && \
-  chmod 700 /usr/sbin/install_R_versions && \
   chmod 700 /usr/sbin/install_python_versions
 
 # Install Python
 RUN \
   /usr/sbin/install_python_versions
-
-# Install R with different versions
-RUN \
-  /usr/sbin/install_R_versions
-ENV PATH ${PATH}:/usr/local/R/current/bin/

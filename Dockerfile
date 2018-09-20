@@ -65,10 +65,10 @@ RUN \
   tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2 -C /usr/local/share/ && \
   rm phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
   ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin && \
-  wget https://github.com/jgm/pandoc/releases/download/2.1.1/pandoc-2.1.1-linux.tar.gz && \
-  tar -xvzf pandoc-2.1.1-linux.tar.gz --strip-components 1 -C /usr/local/ && \
+  wget https://github.com/jgm/pandoc/releases/download/2.3/pandoc-2.3-linux.tar.gz && \
+  tar -xvzf pandoc-2.3-linux.tar.gz --strip-components 1 -C /usr/local/ && \
   which pandoc && \
-  rm -rf pandoc-2.1.1-linux.tar.gz && \
+  rm -rf pandoc-2.3-linux.tar.gz && \
   apt-get clean && \
   apt-get autoremove && \
   apt-get autoclean
@@ -81,3 +81,15 @@ RUN \
 # Install Python
 RUN \
   /usr/sbin/install_python_versions
+
+# Copy latest h2o.jar
+USER root
+RUN \
+  mkdir -p /opt/h2o-3/logs && \
+  cd /opt/h2o-3 && \
+  wget http://h2o-release.s3.amazonaws.com/h2o/rel-wright/7/h2o-3.20.0.7.zip && \
+  unzip /opt/h2o-3/h2o-3.20.0.7.zip && \
+  mv /opt/h2o-3/h2o-3.20.0.7/h2o.jar /opt/h2o-3/ && \
+  rm /opt/h2o-3/h2o-3.20.0.7.zip && \
+  rmdir /opt/h2o-3/h2o-3.20.0.7 && \
+  chmod -R 777 /opt/h2o-3

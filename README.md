@@ -23,7 +23,6 @@ H2O-3 (this repository) is the third incarnation of H2O, and the successor to [H
 * [Citing H2O](#Citing)
 * [Community](#Community) / [Advisors](#Advisors) / [Investors](#Investors)
 
-<a name="Downloading"></a>
 ## 1. Downloading H2O-3
 
 While most of this README is written for developers who do their own builds, most H2O users just download and use a pre-built version.  If you are a Python or R user, the easiest way to install H2O is via [PyPI](https://pypi.python.org/pypi/h2o) or [Anaconda](https://anaconda.org/h2oai/h2o) (for Python) or [CRAN](https://CRAN.R-project.org/package=h2o) (for R):  
@@ -44,12 +43,10 @@ For the latest stable, nightly, Hadoop (or Spark / Sparkling Water) releases, or
 
 More info on downloading & installing H2O is available in the [H2O User Guide](http://docs.h2o.ai/h2o/latest-stable/h2o-docs/downloading.html).
 
-<a name="Resources"></a>
 ## 2. Open Source Resources
 
 Most people interact with three or four primary open source resources:  **GitHub** (which you've already found), **JIRA** (for bug reports and issue tracking), **Stack Overflow** for H2O code/software-specific questions, and **h2ostream** (a Google Group / email discussion forum) for questions not suitable for Stack Overflow.  There is also a **Gitter** H2O developer chat group, however for archival purposes & to maximize accessibility, we'd prefer that standard H2O Q&A be conducted on Stack Overflow.
 
-<a name="IssueTracking"></a>
 ### 2.1 Issue Tracking and Feature Requests
 
 > (Note: There is only one issue tracking system for the project.  GitHub issues are not enabled; you must use JIRA.)
@@ -70,7 +67,6 @@ You can browse and create new issues in our open source **JIRA**:  <http://jira.
 	3. Search for the feature that you want to prioritize, or create a new feature.
 	4. Click on the **Vote for this issue** link. This is located on the right side of the issue under the **People** section.
 
-<a name="OpenSourceResources"></a>
 ### 2.2 List of H2O Resources
 
 *  GitHub
@@ -103,7 +99,6 @@ You can browse and create new issues in our open source **JIRA**:  <http://jira.
    * <https://github.com/h2oai/awesome-h2o>
 
 
-<a name="Artifacts"></a>
 ## 3. Using H2O-3 Artifacts
 
 Every nightly build publishes R, Python, Java, and Scala artifacts to a build-specific repository.  In particular, you can find Java artifacts in the maven/repo directory.
@@ -138,7 +133,6 @@ Refer to the [h2o-droplets GitHub repository](https://github.com/h2oai/h2o-dropl
 > Note: Stable H2O-3 artifacts are periodically published to Maven Central ([click here to search](http://search.maven.org/#search%7Cga%7C1%7Cai.h2o)) but may substantially lag behind H2O-3 Bleeding Edge nightly builds.
 
 
-<a name="Building"></a>
 ## 4. Building H2O-3
 
 Getting started with H2O development requires [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/), [Node.js](https://nodejs.org/), [Gradle](https://gradle.org/), [Python](https://www.python.org/) and [R](http://www.r-project.org/).  We use the Gradle wrapper (called `gradlew`) to ensure up-to-date local versions of Gradle and other dependencies are installed in your development directory.
@@ -233,7 +227,6 @@ git pull
 open target/docs-website/h2o-docs/index.html
 ```
 
-<a name="SetupWin"></a>
 ### 4.3. Setup on Windows
 
 ##### Step 1: Download and install [WinPython](https://winpython.github.io).
@@ -263,7 +256,6 @@ Install [Node.js](http://nodejs.org/download/) and add the installed directory `
 
 Install [R](http://www.r-project.org/) and add the bin directory to your PATH if not already included.
 
-<a name="InstallRPackagesInUnix"></a>
 Install the following R packages:
 
 - [RCurl](http://cran.r-project.org/package=RCurl)
@@ -332,7 +324,6 @@ Otherwise, install from the [NodeJS website](http://nodejs.org/download/).
 
 Install [R](http://www.r-project.org/) and add the bin directory to your PATH if not already included.
 
-<a name="InstallRPackagesInUnix"></a>
 Install the following R packages:
 
 - [RCurl](http://cran.r-project.org/package=RCurl)
@@ -484,7 +475,6 @@ cd h2o-3
 ```
 
 
-<a name="Launching"></a>
 ## 5. Launching H2O after Building
 
 To start the H2O cluster locally, execute the following on the command line:
@@ -493,7 +483,6 @@ To start the H2O cluster locally, execute the following on the command line:
 
 A list of available start-up JVM and H2O options (e.g. `-Xmx`, `-nthreads`, `-ip`), is available in the [H2O User Guide](http://docs.h2o.ai/h2o/latest-stable/h2o-docs/starting-h2o.html#from-the-command-line).
 
-<a name="BuildingHadoop"></a>
 ## 6. Building H2O on Hadoop
 
 Pre-built H2O-on-Hadoop zip files are available on the [download page](http://h2o.ai/download).  Each Hadoop distribution version has a separate zip file in h2o-3.
@@ -619,7 +608,6 @@ index 41b96b2..6368ea9 100644
  }
 ```
 
-<a name="Sparkling"></a>
 ## 7. Sparkling Water
 
 Sparkling Water combines two open-source technologies: Apache Spark and the H2O Machine Learning platform.  It makes H2O’s library of advanced algorithms, including Deep Learning, GLM, GBM, K-Means, and Distributed Random Forest, accessible from Spark workflows. Spark users can select the best features from either platform to meet their Machine Learning needs.  Users can combine Spark's RDD API and Spark MLLib with H2O’s machine learning algorithms, or use H2O independently of Spark for the model building process and post-process the results in Spark.
@@ -631,7 +619,6 @@ Sparkling Water combines two open-source technologies: Apache Spark and the H2O 
 * [README](https://github.com/h2oai/sparkling-water/blob/master/README.md)
 * [Developer documentation](https://github.com/h2oai/sparkling-water/blob/master/DEVEL.md)
 
-<a name="Documentation"></a>
 ## 8. Documentation
 
 ### Documenation Homepage
@@ -657,7 +644,6 @@ If the build fails, try `gradlew clean`, then `git clean -f`.
 Documentation for each bleeding edge nightly build is available on the [nightly build page](http://s3.amazonaws.com/h2o-release/h2o/master/latest.html).
 
 
-<a name="Citing"></a>
 ## 9. Citing H2O
 
 If you use H2O as part of your workflow in a publication, please cite your H2O resource(s) using the following BibTex entry:
@@ -698,7 +684,6 @@ Arora, A., Candel, A., Lanford, J., LeDell, E., and Parmar, V. (Oct. 2016). _Dee
 Click, C., Lanford, J., Malohlava, M., Parmar, V., and Roark, H. (Oct. 2016). _Gradient Boosted Models with H2O_. <http://docs.h2o.ai/h2o/latest-stable/h2o-docs/booklets/GBMBooklet.pdf>.
 
 
-<a name="Community"></a>
 ## 10. Community
 
 H2O has been built by a great many number of contributors over the years both within H2O.ai (the company) and the greater open source community.  You can begin to contribute to H2O by answering [Stack Overflow](http://stackoverflow.com/questions/tagged/h2o) questions or [filing bug reports](https://0xdata.atlassian.net/projects/PUBDEV/issues).  Please join us!  
@@ -773,7 +758,6 @@ Wendy Wong
 Nikhil Shekhar
 ```
 
-<a name="Advisors"></a>
 ## Advisors
 
 Scientific Advisory Council
@@ -792,7 +776,6 @@ Chris Pouliot
 Dhruba Borthakur
 ```
 
-<a name="Investors"></a>
 ## Investors
 
 ```

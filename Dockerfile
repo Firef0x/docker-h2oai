@@ -91,5 +91,4 @@ RUN \
   unzip /opt/h2o-3/h2o-3.20.0.7.zip && \
   mv /opt/h2o-3/h2o-3.20.0.7/h2o.jar /opt/h2o-3/ && \
   rm /opt/h2o-3/h2o-3.20.0.7.zip && \
-  rmdir /opt/h2o-3/h2o-3.20.0.7 && \
   chmod -R 777 /opt/h2o-3
